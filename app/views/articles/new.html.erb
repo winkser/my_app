@@ -1,0 +1,25 @@
+<div class="center hero-unit">
+<h1>Создать новую статью.</h1>
+<%= link_to 'Назад', pages_index_path %>
+  <%= form_for @article do |f| %>
+    <p>
+      <strong>Название:</strong>
+    </p>
+
+    <p>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <strong>Текст статьи:</strong>
+    </p>
+
+    <p>
+      <%= f.text_area :text, size: "50x10" %>
+    </p>
+
+    <p>
+      <%= f.submit "Создать статью" %>
+    </p>
+<% end %>
+</div>

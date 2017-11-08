@@ -1,0 +1,41 @@
+<div class="row">
+ <div class="col-md-12 center">
+  <h1>Задание №2</h1>
+ </div>
+ <div class="col-md-6">
+  <h3>Windows</h3>
+  <p>hash={}<br>
+    result=[]<br>
+    dir = Dir.new("c:/")<br>
+    dir.entries.each do |file|<br>
+      if hash[file]<br>
+        hash[file]+=1<br>
+      else<br>
+        hash[file]=1<br>
+      end<br>
+    hash.each do |file_name, c|<br>
+      result<<{filename:file_name, count: c}<br>
+    end<br>
+    result<br>
+</p>
+</div>
+<div class="col-md-6">
+  <h3>Linux</h3>
+  <p>hash={}<br>
+    result=[]<br>
+    dir = Dir.new("c:/")<br>
+    dir.entries.each do |file|<br>
+      if hash[file]<br>
+        hash[file]+=1<br>
+      else<br>
+        hash[file]=1<br>
+      end<br>
+    hash.delete(".")<br>
+    hash.delete("..")<br>
+    hash.each do |file_name, c|<br>
+      result<<{filename:file_name, count: c}<br>
+    end<br>
+    result<br>
+</p>
+</div>
+</div>

@@ -1,0 +1,18 @@
+
+<div class="center hero-unit">
+      <% if user_signed_in? %>
+        <a class="btn btn-primary btn-lg" href="<%= new_article_path%>" role="button">Создать новую статью!</a>        
+      <% end %>
+  <% @articles.each do |f| %>
+
+    <div class="jumbotron">
+      <h3><%= f.title %></h3>
+      <p><%= f.text[0..120]+"..." %></p>
+      <p><a class="btn btn-primary btn-lg" href="<%= article_path(f)%>" role="button">Читать подробнее</a></p>
+      <% if user_signed_in? %>
+      <p><a class="btn btn-primary btn-lg" href="<%= article_path(f)%>" role="button" data-method="DELETE">Удалить статью</a></p>      
+      <% end %>
+    </div>
+  
+  <% end %>
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My blog</title>
+    <%= stylesheet_link_tag "application", media: "all",
+                                           "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <%= render 'layouts/header' %> 
+    <div class="container">
+      <div class="center hero-unit"> 
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+      </div>
+      <%= yield %>        
+      <%= render 'layouts/footer' %> 
+    </div>
+  </body>
+</html>

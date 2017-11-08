@@ -1,0 +1,13 @@
+<div class="center hero-unit">
+  <h1>Вот она, статья: "<%= @article.title %>"</h1>
+
+  <p>
+    <%= @article.text %>
+  </p>
+
+  <p>
+    <%= @article.created_at %>
+  </p>
+
+  <%= link_to 'Назад к списку статей', articles_path %>
+</div>

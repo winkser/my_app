@@ -1,0 +1,14 @@
+<div class="center hero-unit">
+  <h1>Задание №1</h1>
+    
+  <h3>SQL запрос: "SELECT id, name, created_at FROM invoices ORDER BY substring(name from '\d+')::INT DESC;"</h3>
+  
+    <p>Ниже с использованием active record.</p>
+      <% @invoices.each do |f| %>
+        <p><%= f.id+"||"+f.name+"||"+f.created_at.to_s %></p>
+      <% end %>
+    <p>Invoices_sort</p>
+      <% @invoices_sort.each do |f| %>
+        <p><%= f.id+"||"+f.name+"||"+f.created_at.to_s %></p>
+      <% end %>
+</div>
